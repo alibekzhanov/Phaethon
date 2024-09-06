@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- подключаю шрифт Mulish: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- мой css: -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='weather.css') }}">
+    <title>City Weather</title>
+</head>
+
+<body>
+    <!-- logo -->
+    <!-- <div class="logo-container">
+        <img src="{{ url_for('static', filename='phaethon_logo/phaethon_logo_original.svg') }}" class="logo">
+    </div> -->
+
+    <!-- weather info -->
+    <div class="grid-container">
+
+        <!-- general-info -->
+        <div class="general-info">
+            <div class="location">
+                <img src="{{ url_for('static', filename='vectors/location.svg') }}" class="location-icon">
+                <div class="location-text">
+                    <p class="country">{{ country }}</p>
+                    <p class="city_name">{{ city_name }}</p>
+                </div>
+            </div>
+            <p class="general-info-temperature">{{ temp_celsius }}°</p>
+            <div class="secondary-info">
+                <p class="description">{{ description.title() }}</p>
+                <p class="feels_like">Feels Like: {{ feels_like_celsius }}°C</p>
+            </div>
+        </div>
+
+        <!-- minor-info -->
+        <div class="minor-info">
+            <div class="сlimate-indicators">
+                <img src="{{ url_for('static', filename='vectors/wind_speed.svg') }}" alt="" class="">
+                <p class="wind-speed">Wind Speed: {{ wind_speed }}</p>
+            </div>
+            <div class="сlimate-indicators">
+                <img src="{{ url_for('static', filename='vectors/visibility.svg') }}" alt="" class="">
+                <p class="visibility">Visibility: {{ visibility }}</p>
+            </div>
+            <div class="сlimate-indicators">
+                <img src="{{ url_for('static', filename='vectors/humidity.svg') }}" alt="" class="">
+                <p class="humidity">Humidity: {{ humidity }}</p>
+            </div>
+        </div>
+
+        <!-- coordinates-info -->
+        <div class="coordinates-info">
+            <div class="coordinates-info-with_icon">
+                <img src="{{ url_for('static', filename='vectors/longitude.svg') }}" alt="" class="">
+                <p>Longitude: {{ longitude }}</p>
+            </div>
+            <div class="coordinates-info-with_icon">
+                <img src="{{ url_for('static', filename='vectors/latitude.svg') }}" alt="" class="">
+                <p>Latitude: {{ latitude }}</p>
+            </div>
+        </div>
+
+        <!-- sun-info -->
+        <div class="sun-info">
+            <img src="{{ url_for('static', filename='vectors/sun.svg') }}" alt="" class="sun-icon">
+            <p class="sunrise-time">Sunrise Time:<br>{{ sunrise_time }}</p>
+            <p class="sunset-time">Sunset Time:<br>{{ sunset_time }}</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

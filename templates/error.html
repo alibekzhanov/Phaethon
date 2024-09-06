@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- мой css: -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='error.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <!-- logo -->
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='phaethon_logo/phaethon_logo_original.svg') }}" class="logo">
+    </div>
+
+    <div class="error-text">
+        <h1>Error</h1>
+        <p>City not found or data unavailable.</p>
+        <a href="{{ url_for('index') }}" class="back">Back to Home</a>
+    </div>
+</body>
+</html>

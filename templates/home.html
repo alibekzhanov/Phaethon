@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- подключаю шрифт Mulish: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- мой css: -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+    <title>Phaethon</title>
+</head>
+<body>
+    <!-- logo -->
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='phaethon_logo/phaethon_logo_original.svg') }}" class="logo">
+    </div>
+
+    <!-- input-container -->
+    <div class="input-container">
+        <form action="/weather" method="post">
+            <div class="user_input">
+                <h1>Enter the Name of the City:</h1>
+                <div class="search-container">
+                    <div class="input-wrapper">
+                        <img src="{{ url_for('static', filename='vectors/loop.svg') }}" alt="icon" class="loop-icon">
+                        <input type="text" id="city-name" name="city-name" placeholder="For Instance: Moscow"/>
+                        <button id="go" type="submit">Go!</button>
+                    </div>
+                </div>
+                <button id="clear" type="reset">Clear</button>
+            </div>
+        </form>        
+    </div>
+
+    <!-- Sign In link -->
+    <div class="signin-container">
+        <a href="{{ url_for('registration') }}">Sign In</a>
+    </div>
+
+</body>
+</html>

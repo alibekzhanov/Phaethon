@@ -1,0 +1,150 @@
+body, html {
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+    background-color: #212624;
+}
+
+
+
+
+/* logo */
+.logo-container {
+    text-align: center;
+    margin-top: 50px;
+}
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+
+
+
+/* input-container */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.user_input {
+    text-align: center;
+}
+.user_input h1 {
+    color: #4be2b3;
+    font-weight: 700; /* bold */
+    font-size: 35px;
+}
+.search-container {
+    margin-top: 20px;
+}
+.input-wrapper {
+    position: relative;
+}
+.loop-icon {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#city-name {
+    width: 400px;
+    padding: 10px 45px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-style: italic; /* italic */
+    font-size: 15px;
+}
+input[type="text"] {
+    width: 400px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-style: italic; /* italic */
+    font-size: 15px;
+}
+#go, #clear {
+    width: 80px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#go {
+    background-color: #4be2b3;
+    color: #212624;
+    border: none;
+}
+#go:hover {
+    background-color:#316857;
+    color: white;
+}
+
+#clear {
+    background-color: #7f7f7f;
+    color: white;
+    border: none;
+}
+#clear:hover {
+    background-color: #474747;
+}
+
+
+
+
+/* Sign Up link */
+.signin-container {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 50px; /* Отступ от нижнего края */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translateX(-50%); /* Центрирование по горизонтали */
+    text-align: center; /* Центрирование текста по горизонтали */
+}
+
+.signin-container a {
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    color: #4be2b3; /* Цвет текста ссылки */
+    font-weight: 500; /* Medium */
+    position: relative; /* Устанавливаем позицию как относительную для позиционирования линии */
+}
+
+.signin-container a::after {
+    content: ""; /* Псевдоэлемент для создания линии */
+    display: block; /* Делаем элемент блочным */
+    height: 2px; /* Высота линии */
+    width: 100%; /* Ширина линии равна ширине текста */
+    background-color: #4be2b3; /* Цвет линии */
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: -5px; /* Позиционируем линию снизу текста */
+    left: 0; /* Выравниваем линию по левому краю */
+    transition: width 0.3s ease; /* Плавный переход */
+}
+
+.signin-container a:hover::after {
+    width: 0; /* При наведении убираем линию */
+}
+
+
+
+
+
+
+/* Это для того чтоб когда пользователь будет выделять текст, выделение будет #4be2b3 цвета */
+::selection {
+    background-color: #4be2b3; /* Цвет фона выделенного текста */
+    color: #212624; /* Цвет текста */
+}

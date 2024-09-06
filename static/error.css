@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+    background-color: #212624;
+}
+
+
+/* logo */
+.logo-container {
+    text-align: center;
+    margin-top: 50px;
+}
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+
+
+.error-text {
+    text-align: center;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.error-text h1 {
+    color: #ffffff;
+    font-weight: 700; /* bold */
+    font-size: 35px;
+}
+.error-text p {
+    color: #ffffff;
+    font-weight: 500; /* medium */
+}
+/* Общие стили для кнопок */
+.error-text .back {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #4ce2b2; /* ваш цвет фона */
+    color: #212624; /* цвет текста */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Стиль при наведении */
+.back:hover {
+    background-color:#316857; /* цвет фона при наведении */
+    color: white;
+}
+
+
+
+/* Это для того чтоб когда пользователь будет выделять текст, выделение будет #4be2b3 цвета */
+::selection {
+    background-color: #4be2b3; /* Цвет фона выделенного текста */
+    color: #212624; /* Цвет текста */
+}

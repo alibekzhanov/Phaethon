@@ -1,0 +1,85 @@
+body, html {
+    margin: 0;
+    font-family: 'Mulish', sans-serif;
+    background-color: #212624;
+}
+
+
+/* logo */
+.logo-container {
+    text-align: center;
+    margin-top: 50px;
+}
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+
+.registration {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    flex-direction: column;
+}
+
+.registration h1 {
+    color: #4be2b3;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.registration .required-fields {
+    color: white;
+    font-weight: 500; /* medium */
+    margin: 0 0 0 5px;
+}
+
+.search-container {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column; /* Добавлено для вертикального расположения */
+    align-items: flex-start; /* Элементы прилигают к левому краю */
+}
+
+.input-wrapper input {
+    padding: 10px 10px 10px 40px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Отступ между элементами */
+    width: 400px; /* Увеличенная ширина input */
+}
+
+.input-wrapper button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4ce2b2;
+    color: #212624;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-wrapper button:hover {
+    background-color: #316857;
+    color: white;
+}
+
+
+
+/* Это для того чтоб когда пользователь будет выделять текст, выделение будет #4be2b3 цвета */
+::selection {
+    background-color: #4be2b3; /* Цвет фона выделенного текста */
+    color: #212624; /* Цвет текста */
+}

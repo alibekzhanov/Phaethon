@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- подключаю шрифт Mulish: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- мой css: -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='registration.css') }}">
+    <title>Phaethon</title>
+</head>
+<body>
+    <!-- logo -->
+    <div class="logo-container">
+        <img src="{{ url_for('static', filename='phaethon_logo/phaethon_logo_original.svg') }}" class="logo">
+    </div>
+
+    <!-- input-container -->
+    <div class="registration">
+        
+        <!-- Sing In -->
+        <div class="sign_in">
+            <h1>Sign In</h1>
+            <p class="required-fields">* Required Fields *</p>
+            <div class="search-container">
+                <div class="input-wrapper">
+                    <input type="text" id="email" name="email" placeholder="Email"/>
+                    <input type="text" id="password" name="password" placeholder="Password"/>
+                    <button id="go" type="submit">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create a profile  -->
+        <div class="create-profile">
+            <h1>Create a Profile</h1>
+            <p class="required-fields">* Required Fields *</p>
+            <div class="search-container">
+                <div class="input-wrapper">
+                    <input type="text" id="email" name="email" placeholder="Email"/>
+                    <input type="text" id="password" name="password" placeholder="Password"/>
+                    <button id="go" type="submit">Create</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
